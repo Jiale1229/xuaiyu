@@ -4,7 +4,8 @@
     <ModuleTransition delay="0.08">
       <section v-show="recoShowModule">
         <div class="content-wrapper" :style="{padding:$showSubSideBar?'':'2rem 0'}">
-          <Content :class="['theme-reco-content',{'theme-reco-content-noSubSideBar':!pageStyle}]"/>
+          <Content v-lazy-container="{ selector: 'img' }"
+                   :class="['theme-reco-content',{'theme-reco-content-noSubSideBar':!pageStyle}]"/>
           <SubSidebar v-if="recoShowModule" class="side-bar"/>
         </div>
       </section>
@@ -12,7 +13,7 @@
 
     <ModuleTransition delay="0.16">
       <footer class="page-edit">
-        <div class="edit-link"  v-if="editLink">
+        <div class="edit-link" v-if="editLink">
           <a
               :href="editLink"
               target="_blank"

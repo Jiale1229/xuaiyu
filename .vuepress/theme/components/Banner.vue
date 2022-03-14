@@ -1,7 +1,6 @@
 <template>
   <!--页面banner page页取页面cover -->
-  <div class="page-banner"
-       :style="{ backgroundImage: `url(${$page.frontmatter.cover}` }">
+  <div class="page-banner" v-lazy:background-image="$page.frontmatter.cover" :key="$page.frontmatter.cover">
     <ModuleTransition delay="0.04">
       <h1 class="hero-title">
         {{ $page.title }}

@@ -4,11 +4,11 @@
       @click="$router.push(item.path)">
     <!--    <reco-icon v-if="item.frontmatter.sticky" icon="reco-sticky"/>-->
     <div class="blur-img">
-      <img v-lazy="item.frontmatter.cover"
+      <img v-lazy="item.frontmatter.cover" :key="item.frontmatter.cover"
            :alt="item.title"/>
     </div>
     <div class="cover">
-      <img v-lazy="item.frontmatter.cover" class="cover-img" :alt="item.title"/>
+      <img v-lazy="item.frontmatter.cover" class="cover-img" :alt="item.title" :key="item.frontmatter.cover"/>
     </div>
     <div class="info">
 

@@ -11,6 +11,7 @@
         <h4 id="writer" class="sm-hero-title"></h4>
       </ModuleTransition>
 
+
       <i class="iconfont reco-other anchor-down" @click="scrollFn" id="AnchorDown"></i>
     </div>
     <!--首页大图-->

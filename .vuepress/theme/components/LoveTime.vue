@@ -6,12 +6,15 @@
     </h4>
     <div class="love-img">
      <span>
-         <img v-lazy="'https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/pic0.jpg'" alt="love">
+         <img :key="'https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/pic0.jpg'"
+              v-lazy="'https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/pic0.jpg'" alt="love">
      </span>
 
-      <span> <img v-lazy="'https://txcdn.kenvie.com/blog/toutu/z.gif'" alt="love"></span>
+      <span> <img v-lazy="'https://txcdn.kenvie.com/blog/toutu/z.gif'"
+                  :key="'https://txcdn.kenvie.com/blog/toutu/z.gif'" alt="love"></span>
       <span>  <img v-lazy="'https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/pic1.jpg'"
-                   alt="love"></span>
+                   alt="love"
+                   :key="'https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/pic1.jpgf'"></span>
     </div>
     <router-link id="love-time" to="/photos/"></router-link>
   </div>
