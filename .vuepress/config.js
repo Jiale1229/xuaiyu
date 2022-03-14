@@ -141,7 +141,7 @@ module.exports = {
         // 搜索设置
         "search": true,
         "searchMaxSuggestions": 10,//搜索框显示的搜索结果数量
-        // "lastUpdated": 'Last Updated', // string | boolean 最后更新时间 基于git
+        "lastUpdated": true, // string | boolean 最后更新时间 基于git
         "author": "徐乐乐",// 作者名字
         "authorAvatar": "https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/authorAvatar.gif",// 作者头像
         // 备案

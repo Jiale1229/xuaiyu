@@ -10,9 +10,9 @@
       </section>
     </ModuleTransition>
 
-    <ModuleTransition delay="0.16" v-if="editLink">
+    <ModuleTransition delay="0.16">
       <footer class="page-edit">
-        <div class="edit-link">
+        <div class="edit-link"  v-if="editLink">
           <a
               :href="editLink"
               target="_blank"
