@@ -51,7 +51,7 @@
         </div>
       </div>
     </ModuleTransition>
-    <Content v-show="recoShowModule" class="home-center" custom/>
+<!--    <Content v-show="recoShowModule" class="home-center" custom/>-->
   </div>
 </template>
 
@@ -177,7 +177,7 @@ export default defineComponent({
   .home-blog-wrapper {
     display flex
     align-items: flex-start;
-    margin 20px auto 0
+    margin 20px auto 30px
     padding 0 20px
     max-width $homePageWidth
 
