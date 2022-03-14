@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "author": "xulele",
   "scripts": {
-    "dev": "vuepress dev . --open --host \"192.168.1.114\"",
+    "dev": "vuepress dev . --open --host \"localhost\"",
     "build": "vuepress build .",
     "dep":"bash deploy.sh"
   },
