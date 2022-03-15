@@ -1,6 +1,6 @@
 ---
 title: GitHub+PicGo+jsDelivr+Typora
-cover: https://api.btstu.cn/sjbz/api.php?lx=suiji&format=images
+randomCover: https://api.btstu.cn/sjbz/api.php?lx=suiji&format=images
 date: '2021-08-05'
 categories:
  - 技术教程

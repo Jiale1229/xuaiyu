@@ -1,7 +1,5 @@
 <template>
   <div class="theme-container" :class="pageClasses">
-
-
     <!--    非绝对加密 模板-->
     <div v-if="!absoluteEncryption">
 
@@ -16,7 +14,8 @@
       <div :class="{ 'hide': firstLoad || !isHasKey }">
 
 
-        <Navbar :showModule="showModule" v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar"/>
+        <Navbar :showModule="showModule || $frontmatter.layout === 'Photos'" v-if="shouldShowNavbar"
+                @toggle-sidebar="toggleSidebar"/>
 
         <div class="sidebar-mask" @click="toggleSidebar(false)"></div>
 
@@ -28,7 +27,7 @@
         <Password v-show="!isHasPageKey" :isPage="true" class="password-wrapper-in" key="in"></Password>
 
         <div class="common-wrapper" :class="{ 'hide': !isHasPageKey }">
-          <Banner v-if="$page.frontmatter.cover"/>
+          <Banner v-if="$page.frontmatter.cover || $page.frontmatter.randomCover || $frontmatter.layout==='Photos'"/>
           <slot></slot>
           <Footer class="footer"/>
         </div>

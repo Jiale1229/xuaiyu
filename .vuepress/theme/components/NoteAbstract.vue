@@ -7,15 +7,12 @@
         :currentPage="currentPage"
         :currentTag="currentTag"
     />
-
     <pagation
         class="pagation"
         :total="data.length"
         :currentPage="currentPage"
         @getCurrentPage="getCurrentPage"
     />
-
-
   </div>
 </template>
 
@@ -29,7 +26,6 @@ export default defineComponent({
   mixins: [pagination],
   components: {NoteAbstractItem},
   props: ['data', 'currentTag'],
-
   setup(props, ctx) {
     const instance = useInstance()
 
@@ -37,12 +33,19 @@ export default defineComponent({
 
     const currentPage = ref(1)
 
+    /*修改 Md randomCover字段 随机封面图*/
+    data.value.forEach((v, k) => {
+      if (v.frontmatter.randomCover) {
+        const randomNumber = Math.random().toString(36).substr(2)
+        v.frontmatter.randomCover = `https://api.btstu.cn/sjbz/api.php?lx=suiji&format=images&randomnum=${randomNumber}`
+      }
+    })
+
     const currentPageData = computed(() => {
       const start = (currentPage.value - 1) * instance.$perPage
       const end = currentPage.value * instance.$perPage
       return data.value.slice(start, end)
     })
-
 
     const getCurrentPage = (page) => {
       currentPage.value = page

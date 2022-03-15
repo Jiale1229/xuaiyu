@@ -1,5 +1,5 @@
 <template>
-  <header :class="['navbar',{'top-nav':isTopNav||!showModule}]">
+  <header :class="['navbar',{'top-nav':isTopNav|| !showModule}]">
 
     <SidebarButton @toggle-sidebar="$emit('toggle-sidebar')"/>
 

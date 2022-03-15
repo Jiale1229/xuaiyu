@@ -51,6 +51,13 @@ module.exports = (options, ctx) => ({
           path: '/timeline/',
           layout: 'TimeLines',
           scopeLayout: 'TimeLine'
+        },
+        {
+          id: 'photos',
+          keys: ['photos'],
+          path: '/photos/',
+          layout: 'Photos',
+          scopeLayout: 'Photos'
         }
       ]
     }],

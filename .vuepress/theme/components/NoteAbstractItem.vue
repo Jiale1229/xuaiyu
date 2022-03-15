@@ -4,14 +4,16 @@
       @click="$router.push(item.path)">
     <!--    <reco-icon v-if="item.frontmatter.sticky" icon="reco-sticky"/>-->
     <div class="blur-img">
-      <img v-lazy="item.frontmatter.cover" :key="item.frontmatter.cover"
+      <img v-lazy="item.frontmatter.cover || item.frontmatter.randomCover"
+           :key="item.frontmatter.cover || item.frontmatter.randomCover"
            :alt="item.title"/>
     </div>
     <div class="cover">
-      <img v-lazy="item.frontmatter.cover" class="cover-img" :alt="item.title" :key="item.frontmatter.cover"/>
+      <img v-lazy="item.frontmatter.cover || item.frontmatter.randomCover" class="cover-img"
+           :alt="item.title"
+           :key="item.frontmatter.cover || item.frontmatter.randomCover"/>
     </div>
     <div class="info">
-
       <router-link class="title" :to="item.path">
         <reco-icon v-if="item.frontmatter.keys" icon="reco-lock"/>
         {{ item.title }}

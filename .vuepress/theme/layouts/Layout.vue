@@ -2,7 +2,6 @@
   <Common :sidebarItems="sidebarItems" :showModule="recoShowModule">
     <Page v-if="$frontmatter.title" :sidebar-items="sidebarItems"/>
     <component v-else :is="$options.components.HomeBlog"/>
-
   </Common>
 </template>
 
@@ -10,7 +9,6 @@
 import {defineComponent, computed} from 'vue-demi'
 import HomeBlog from '@theme/components/HomeBlog'
 import Page from '@theme/components/Page'
-
 import Common from '@theme/components/Common'
 import {resolveSidebarItems} from '@theme/helpers/utils'
 import moduleTransitonMixin from '@theme/mixins/moduleTransiton'

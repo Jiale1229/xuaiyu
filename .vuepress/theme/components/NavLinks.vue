@@ -47,7 +47,7 @@ export default defineComponent({
       const locales = instance.$site.locales || {}
 
       userNav.value.map((item, index) => {
-        if (index === 1) {
+        if (item.text.indexOf('分类') !== -1) {
           item.link = instance.$categoriesList[0].path
         }
       })

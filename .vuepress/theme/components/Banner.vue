@@ -1,18 +1,18 @@
 <template>
-  <!--页面banner page页取页面cover -->
-  <div class="page-banner" v-lazy:background-image="$page.frontmatter.cover" :key="$page.frontmatter.cover">
+  <!--页面banner 文章详情页取页面cover:指定封面 randomCover：随机封面  其他页面随机封面 -->
+  <div class="page-banner"
+       v-lazy:background-image="$page.frontmatter.cover ||$page.frontmatter.randomCover|| 'https://api.btstu.cn/sjbz/api.php?lx=suiji&format=images&num='+randomNumber"
+       :key="$page.frontmatter.cover">
     <ModuleTransition delay="0.04">
       <h1 class="hero-title">
-        {{ $page.title }}
+        {{ $page.title || '那些日子、我和你' }}
       </h1>
     </ModuleTransition>
-
     <ModuleTransition delay="0.06">
+
       <PageInfo class="sm-hero-title" :pageInfo="$page"></PageInfo>
     </ModuleTransition>
-
   </div>
-
 </template>
 <script>
 import {defineComponent} from 'vue-demi'
@@ -22,6 +22,11 @@ import {ModuleTransition} from '@vuepress-reco/core/lib/components'
 
 export default defineComponent({
   components: {ModuleTransition, PageInfo},
+  setup() {
+    const randomNumber = Math.random().toString(36).substr(2)
+    return {randomNumber}
+  }
+
 })
 
 
