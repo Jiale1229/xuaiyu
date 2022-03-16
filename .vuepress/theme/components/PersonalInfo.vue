@@ -1,11 +1,14 @@
 <template>
   <div class="personal-info-wrapper">
-    <img
-        class="personal-img"
-        v-if="$themeConfig.authorAvatar"
-        :src="$withBase($themeConfig.authorAvatar)"
-        alt="author-avatar"
-    >
+
+    <div class="personal-img">
+      <img
+          v-if="$themeConfig.authorAvatar"
+          :src="$withBase($themeConfig.authorAvatar)"
+          alt="author-avatar"
+      >
+    </div>
+
     <h3
         class="name"
         v-if="$themeConfig.author"
@@ -65,6 +68,16 @@ export default defineComponent({
     width 6rem
     height 6rem
     border-radius 50%
+    overflow hidden
+
+    img {
+      width 100%
+      height 100%
+      display block
+      object-fit cover
+      object-position 85%
+    }
+
   }
 
   .name {

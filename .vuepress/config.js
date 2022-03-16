@@ -2,16 +2,16 @@ const CompressionPlugin = require("compression-webpack-plugin");
 
 
 module.exports = {
-    "title": "花有重开日🌸人无再少年",//博客标题
+    "title": "Xu ❤️ Yu | 幸得有你,山河无恙",//博客标题
     "description": "徐乐乐的碎碎念",//博客描述
     "dest": "public",//博客部署时输出的文件夹
-    "base": "/xuaiyu/",
+    // "base": "/xuaiyu/",
     "head": [
         [
             "link",
             {
                 "rel": "icon",
-                "href": "https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/202108061505626.ico"
+                "href": "https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/3.ico"
             }
         ],
         [
@@ -41,6 +41,7 @@ module.exports = {
                 "text": "照片墙 📷",
                 "link": "/photos/"
             },
+
             {
                 "text": "时间轴 ⌛",
                 "link": "/timeline/"
@@ -116,6 +117,12 @@ module.exports = {
                     },
                 ]
             },
+            {
+                "text": "GitHub",
+                "link": "https://jiale1229.github.io/xuaiyu/",
+                "target": "_blank"
+
+            },
         ],
         "subSidebar": "auto", //全局打开自动子侧边栏功能
         // "activeHeaderLinks": false,
@@ -141,13 +148,13 @@ module.exports = {
                 },
             ]
         },
-        "logo": "https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/gif2.gif",//博客自定义LOGO
+        "logo": "https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/logo1.png",//博客自定义LOGO
         // 搜索设置
         "search": true,
         "searchMaxSuggestions": 10,//搜索框显示的搜索结果数量
         "lastUpdated": true, // string | boolean 最后更新时间 基于git
         "author": "徐乐乐",// 作者名字
-        "authorAvatar": "https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/authorAvatar.gif",// 作者头像
+        "authorAvatar": "https://cdn.jsdelivr.net/gh/Jiale1229/PicGoCdn@master/images/icon/authorAvatar1.gif",// 作者头像
         // 备案
         "record": "豫ICP备2021010779号-1",
         "recordLink": "https://beian.miit.gov.cn/#/Integrated/recordQuery",
