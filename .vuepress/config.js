@@ -2,10 +2,10 @@ const CompressionPlugin = require("compression-webpack-plugin");
 
 
 module.exports = {
-    "title": "Xu ❤️ Yu | 幸得有你,山河无恙",//博客标题
+    "title": "Xu ❤️ Yu • 幸得有你🤗山河无恙",//博客标题
     "description": "徐乐乐的碎碎念",//博客描述
     "dest": "public",//博客部署时输出的文件夹
-    // "base": "/xuaiyu/",
+    "base": "/xuaiyu/",
     "head": [
         [
             "link",
