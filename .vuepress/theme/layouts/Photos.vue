@@ -31,14 +31,17 @@ import Common from '@theme/components/Common'
 import CoolLightBox from 'vue-cool-lightbox' //https://www.vue-coollightbox.cn/
 import 'vue-cool-lightbox/dist/vue-cool-lightbox.min.css'
 import axios from 'axios'
+import {useInstance} from '@theme/helpers/composable'
+
 
 export default defineComponent({
   name: 'Photos',
   components: {Common, CoolLightBox},
   setup() {
+    const instance = useInstance()
     let PhotosList = ref([])
     onBeforeMount(async () => {
-      const res = await axios.get('/mock/photosData.json')
+      const res = await axios.get(instance.$withBase('/mock/photosData.json'))
       PhotosList.value = res.data
     })
     return {PhotosList}
