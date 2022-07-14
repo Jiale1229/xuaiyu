@@ -69,7 +69,7 @@ export default defineComponent({
   .sidebar
     .personal-info-wrapper
       display block
-      color var(--text-white-color)
+      color var(--text-white-color) !important
 
 
     .nav-links

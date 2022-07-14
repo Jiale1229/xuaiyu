@@ -2,7 +2,7 @@
   <div
       class="abstract-item"
       @click="$router.push(item.path)">
-    <!--    <reco-icon v-if="item.frontmatter.sticky" icon="reco-sticky"/>-->
+<!--    <reco-icon v-if="item.frontmatter.sticky" icon="reco-sticky"/>-->
     <div class="blur-img">
       <img v-lazy="item.frontmatter.cover || item.frontmatter.randomCover"
            :key="item.frontmatter.cover || item.frontmatter.randomCover"
@@ -23,7 +23,6 @@
           :pageInfo="item"
           :currentTag="currentTag">
       </PageInfo>
-
     </div>
   </div>
 </template>
