@@ -19,11 +19,11 @@ export function getOneColor () {
   return tagColorArr[index]
 }
 
-export function registerCodeThemeCss (theme = 'tomorrow') {
-  const themeArr = ['tomorrow', 'funky', 'okaidia', 'solarizedlight', 'default']
-  const href = `//prismjs.com/themes/prism${themeArr.indexOf(theme) > -1 ? `-${theme}` : ''}.css`
-  addLinkToHead(href)
-}
+// export function registerCodeThemeCss (theme = 'tomorrow') {
+//   const themeArr = ['tomorrow', 'funky', 'okaidia', 'solarizedlight', 'default']
+//   const href = `//prismjs.com/themes/prism${themeArr.indexOf(theme) > -1 ? `-${theme}` : ''}.css`
+//   addLinkToHead(href)
+// }
 
 export function interceptRouterError (router) {
   // 获取原型对象上的 push 函数

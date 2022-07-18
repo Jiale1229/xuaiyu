@@ -67,7 +67,6 @@ export default defineComponent({
 </script>
 
 <style src="../styles/theme.styl" lang="stylus"></style>
-<!--<style src="prismjs/themes/prism-tomorrow.css"></style>-->
 <style lang="stylus" scoped>
 
 @media (max-width: $MQMobile)

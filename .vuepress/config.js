@@ -20,7 +20,17 @@ module.exports = {
                 "name": "viewport",
                 "content": "width=device-width,initial-scale=1,user-scalable=no"
             }
-        ]
+        ],
+        /**
+         * 代码主题
+         * 'default'
+         * 'funky'
+         * 'okaidia'
+         * 'solarizedlight'
+         * 'tomorrow'
+         */
+            ["link", {"rel": "stylesheet", "href": "https://prismjs.com/themes/prism-tomorrow.css"}]
+
     ],//favicon图标设置
     "theme": "reco",//vuepress挂载的主题
     "themeConfig": {
@@ -132,7 +142,7 @@ module.exports = {
             "socialLinks": [
                 {
                     "icon": "reco-github",
-                    "link": "https://github.com/",
+                    "link": "https://github.com/Jiale1229",
                 },
                 {
                     "icon": "reco-qq",
@@ -164,14 +174,12 @@ module.exports = {
 
         //评论配置项  https://valine.js.org/configuration.html
         "valineConfig": {
-            // "appId": "QPhiwWAdU39MGOgqDWvKFtbt-MdYXbMMI",// your appId
-            // "appKey": "6vqIjTp6jSMJjQ4RRSJbUDah", // your appKey
-            // "placeholder": "快来评论啊",
-            // "enableQQ": true
+            "appId": "QPhiwWAdU39MGOgqDWvKFtbt-MdYXbMMI",// your appId
+            "appKey": "6vqIjTp6jSMJjQ4RRSJbUDah", // your appKey
+            "placeholder": "快来评论啊",
+            "enableQQ": true,
             "showComment": false
         },
-
-
         // 项目的默认加密方式，只是将加密页定位到实际内容上方，所以这种加密功能本身是没有什么作用的。
         // 如果需要绝对的加密，需要设置 absoluteEncryption: true
         // "keyPage": {

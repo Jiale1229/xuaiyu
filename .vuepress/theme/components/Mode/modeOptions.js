@@ -11,7 +11,7 @@ const modeOptions = {
         '--default-color-2': 'rgba(255, 255, 255, .2)',
         '--default-color-1': 'rgba(255, 255, 255, .1)',
         '--default-color-0': 'rgba(255, 255, 255, 0)',
-        '--navbar-background-color': 'rgba(69 ,74, 135,.8)',
+        '--navbar-background-color': 'linear-gradient(to top, rgba(255, 241, 235,.9) 0%, rgba(172, 224, 249,.9) 100%)',
         '--background-color': '#f8f9fa',
         '--background-image': 'url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAACFJREFUeNpiZGBg4GegAsBlCD8TqSYNQg2Mo6FEBAAIMACdPABtrSW/IQAAAABJRU5ErkJggg==")',
         '--box-shadow': '0 1px 8px 0 rgba(0, 0, 0, 0.1)',
